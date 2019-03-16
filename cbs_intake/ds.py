@@ -6,10 +6,10 @@ class CBSODataSource(DataSource):
 
     name = 'cbs-odata'
 
-    def __init__(self, metadata=None):
+    def __init__(self, url, metadata=None):
 
         super(CBSODataSource, self).__init__(metadata)
-        print(metadata)
+        self.url = url
 
     def _get_schema(self):
 

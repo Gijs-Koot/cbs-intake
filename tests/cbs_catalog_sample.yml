@@ -1,0 +1,120 @@
+metadata:
+  version: 1
+sources:
+  03740eng:
+    args:
+      url: http://opendata.cbs.nl/ODataApi/OData/03740eng
+    description: "\nRequests for asylum by country of citizenship, sex\nand age of\
+      \ the asylum seeker. As from 2007, it is possible to make a \ndistinction between\
+      \ first requests and subsequent requests. \nSeparate data are available for\
+      \ all countries of citizenship with at least \n10 asylum seekers.\n\nData available\
+      \ from: 2007.\n\nStatus of the figures: final data. \n\nChanges from January\
+      \ 17th 2012: \nThe figures for the fourth quarter 2011 and the year 2011 have\
+      \ been added.\n\nWhen will new figures be published?\nDiscontinued on 29 February\
+      \ 2012\n"
+    driver: cbs_intake.ds.CBSODataSource
+  '37738':
+    args:
+      url: http://opendata.cbs.nl/ODataApi/OData/37738
+    description: '
+
+      Deze tabel bevat gegevens over de oogst aan groenten in Nederland. Het gaat
+      daarbij om de oogst aan groenten (in miljoenen kilogram) en de bijbehorende
+      teeltoppervlakten (in hectares).
+
+
+      Gegevens beschikbaar vanaf: 1998
+
+
+      Status van de cijfers:
+
+      De cijfers voor de meest recente periode zijn voorlopig. Deze cijfers worden
+      definitief bij de publicatie van de volgende periode.
+
+
+      Wijzigingen per 29 maart 2018:
+
+      De voorlopige cijfers van 2017 zijn toegevoegd. De cijfers van 2016 zijn nu
+      definitief.
+
+
+      Wijzigingen per 5 december 2017:
+
+      De cijfers van de teeltoppervlakte tuinbonen over het jaar 2015 en die van de
+      oogst en teeltoppervlakte van Totaal groenten, Totaal groenten in de open grond,
+      Akkerbouwgroenten, exclusief uien, Totaal blad- en stengelgroenten, Totaal peulvruchten
+      en Totaal vruchtgroenten over de jaren 2015 en 2016 bleken niet juist. Dit is
+      in deze versie gecorrigeerd.
+
+
+      Wanneer komen er nieuwe cijfers?
+
+      In april verschijnen de voorlopige cijfers over het voorafgaande jaar en krijgen
+      de cijfers van een jaar eerder een definitieve status.
+
+
+      Wanneer komen er nieuwe cijfers?
+
+      In maart verschijnen de voorlopige cijfers over het voorafgaande jaar en krijgen
+      de cijfers van een jaar eerder een definitieve status.
+
+      '
+    driver: cbs_intake.ds.CBSODataSource
+  80439ned:
+    args:
+      url: http://opendata.cbs.nl/ODataApi/OData/80439ned
+    description: "\nDe tabel bevat gegevens over de activiteiten op het gebied van\
+      \ research en development (R&D) van bedrijven, instellingen en Hoger onderwijsinstellingen,\
+      \ met 10 en meer werkzame personen, uitgevoerd met eigen personeel in Nederland.\
+      \ Uitbestede R&D is hierin niet meegenomen.\nHet gaat daarbij om:\n- de uitgaven\
+      \ ten behoeve van de R&D verricht met eigen personeel;\n- het eigen R&D-personeel,\
+      \ weergegeven in aantallen arbeidsjaren.\nDe gegevens hebben betrekking op:\n\
+      - bedrijven;\n- instellingen, bestaande uit:\n  * onderzoeksinstellingen;\n\
+      \  * rijksdiensten;\n  * instellingen zorg en welzijn;\n  * overige instellingen.\n\
+      - Hoger onderwijsinstellingen, bestaande uit:\n  * de publiek gefinancierde\
+      \ universiteiten;\n  * de Universitaire Medische Centra (UMC's) waar de Medische\
+      \ Faculteit\n    van de bijbehorende universiteit (deels) in ondergebracht is;\n\
+      \  * het Hoger Beroepsonderwijs (HBO).\n\nGegevens beschikbaar vanaf: 2002.\n\
+      \nStatus van de cijfers: \nCijfers voor bedrijven, instellingen en Hoger onderwijsinstellingen\
+      \ over 2010 zijn definitief.\n\nWanneer komen er nieuwe cijfers?\nDeze tabel\
+      \ is stopgezet per 3-5-2013 en voortgezet als \"Research en development; kerncijfers\
+      \ per sector van uitvoering\". Zie ook paragraaf 3.\n"
+    driver: cbs_intake.ds.CBSODataSource
+  80860ned:
+    args:
+      url: http://opendata.cbs.nl/ODataApi/OData/80860ned
+    description: "\nDeze tabel bevat informatie over inwoners en personen met uitkeringen\
+      \ op gemeenteniveau. Het bijzondere aan deze tabel is dat de gegevens over de\
+      \ jaren 1999 t/m 2009 getoond worden naar de gemeentelijke indeling van 2009.\
+      \ Hierdoor kunnen de cijfers door de tijd heen met elkaar vergeleken worden.\
+      \ Dit in tegenstelling tot de cijfers uit de StatLinetabel Kerncijfers wijken\
+      \ en buurten. In die tabel zijn vergelijkingen door de tijd veelal niet mogelijk\
+      \ door jaarlijkse wijzigingen in de gemeentelijke indeling.\n\nDe tabel bevat\
+      \ cijfers die kunnen afwijken van op het oog vergelijkbare cijfers in andere\
+      \ tabellen op StatLine. Zie voor meer informatie paragraaf 4.\n\nGegevens beschikbaar:\
+      \ vanaf 1999.\n\nStatus van de cijfers: Definitief.\n\nWijzigingen per 21 april\
+      \ 2011:\n\nEr zijn nieuwe cijfers toegevoegd over:\n\n- Personen met een bijstandsuitkering\
+      \  \n- Personen met een arbeidsongeschiktheidsuitkering\n- Personen met een\
+      \ WW-uitkering\n\nWanneer komen er nieuwe cijfers?\nDeze publicatie is stopgezet\
+      \ per 21 april 2011.\nVoor informatie over het (laten) samenstellen van soortgelijke\
+      \ uitkomsten via maatwerk, zie <a href=\"https://www.cbs.nl/NR/exeres/270C16E8-20B7-4BD0-99E8-8C8696BE0702\"\
+      >Onderzoek op maat en voorbeelden</a>.\n\n"
+    driver: cbs_intake.ds.CBSODataSource
+  82439NED:
+    args:
+      url: http://opendata.cbs.nl/ODataApi/OData/82439NED
+    description: "\nDeze tabel geeft informatie over de ontwikkeling van de omzet\
+      \ van de horeca (SBI 2008 afdelingen 55 en 56). Van de omzet is  doorgaans waarde,\
+      \ volume en prijs gepresenteerd. De gegevens zijn verder onderverdeeld naar\
+      \ branches volgens de Standaard Bedrijfsindeling (SBI) 2008 van het CBS. De\
+      \ ontwikkeling is weergegeven met behulp van indexcijfers en als procentuele\
+      \ verandering ten opzichte van dezelfde periode in het voorafgaande jaar. Daarnaast\
+      \ zijn ook seizoengecorrigeerde ontwikkelingen ten opzichte van voorgaand kwartaal\
+      \ opgenomen voor omzet en volume.\n\nGegevens beschikbaar van 1e kwartaal 2005\
+      \ t/m 4e kwartaal 2017. \n\nStatus van de cijfers:\nDe cijfers over 2017 zijn\
+      \ voorlopig, die van de overige perioden zijn definitief.\n\nWijzigingen per\
+      \ 27 juni 2018:\nGeen, de tabel is stopgezet.\n\nWanneer komen er nieuwe cijfers?\n\
+      Niet meer van toepassing.\nDeze tabel is naar aanleiding van de vijfjaarlijkse\
+      \ basisverlegging per 31 mei 2018 stopgezet en opgevolgd door een nieuwe tabel.\
+      \ Voor meer informatie over de basisverlegging zie paragraaf 3.\n\n"
+    driver: cbs_intake.ds.CBSODataSource

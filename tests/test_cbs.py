@@ -1,14 +1,13 @@
 import intake
-from cbs_intake.ds import CBSODataSource
+import logging
 
 
 def test_discovery():
 
     # hijack registry for live inserting class in registry
-    intake.registry['cbs-odata'] = CBSODataSource
-    cat = intake.open_catalog("./catalog/cbs.yml")
+    cat = intake.open_catalog("./tests/cbs_catalog_sample.yml")
 
     # load one of the datasets
-    src = cat['82055NED'].get()
+    src = cat['82439NED'].get()
 
-    print(src.discover())
+    assert src.discover()["npartitions"] == 1

@@ -13,3 +13,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 python -m pytest
 ```
+
+### Creating the CBS catalog
+
+```
+python build_catalog.py [FILENAME]
+```
+

@@ -16,7 +16,7 @@ def download_data():
     dr = tempfile.gettempdir()
     fn = os.path.join(dr, CACHE_FILE)
     if os.path.exists(fn):
-        logging.debug(f"Reading file from cachefile {fn}.")
+        logging.info(f"Reading file from cachefile {fn}.")
         text = open(fn).read()
     else:
         response = requests.get(TABLES_URL)
@@ -50,11 +50,10 @@ def entry_to_source(entry):
 
     d = cbs_xml_to_dict(entry)
     props = d["content"]["properties"]
-    
+
     return props["Identifier"], {
-        "description": props["ShortDescription"],
-        "driver": 'cbs-odata',
-        "metadata": d,
+        "description": props["ShortDescription"] or "-",
+        "driver": 'cbs_intake.ds.CBSODataSource',
         "args": {
             "url": props["ApiUrl"]
         }
@@ -64,8 +63,10 @@ def entry_to_source(entry):
 def write_to_file(fn):
 
     text = download_data()
+    logging.info("Read raw data")
     entries = list_entries(text)
-
+    logging.info(f"Parsed {len(entries)} entries")
+    
     d = {
         "metadata": {
             "version": 1
@@ -75,8 +76,9 @@ def write_to_file(fn):
         }
     }
 
+    logging.info(f"Writing catalog into {fn}")
     with open(fn, "w") as f:
-        yaml.dump(d, f)
+        yaml.dump(d, f, default_flow_style=False)
 
 
 def cbs_xml_to_dict(el):
@@ -84,6 +86,11 @@ def cbs_xml_to_dict(el):
     if el.text:
         return el.text
 
-    return {
+    children = {
         child.tag: cbs_xml_to_dict(child) for child in el.getchildren()
     }
+
+    if children:
+        return children
+
+    return None
