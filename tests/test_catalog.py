@@ -10,10 +10,12 @@ def sample_catalog():
     return open_catalog("./tests/cbs_catalog_sample.yml")
 
 
-def test_creation():
+def test_reading_catalog():
 
     fd = tempfile.gettempdir()
     fn = os.path.join(fd, cbs_intake.cat.CACHE_FILE)
+
+    breakpoint
 
     text = cbs_intake.cat.download_data()
     with open(fn) as f:

@@ -87,7 +87,7 @@ def cbs_xml_to_dict(el):
         return el.text
 
     children = {
-        child.tag: cbs_xml_to_dict(child) for child in el.getchildren()
+        child.tag: cbs_xml_to_dict(child) for child in list(el)
     }
 
     if children:

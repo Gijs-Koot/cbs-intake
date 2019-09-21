@@ -25,3 +25,6 @@ class CBSODataSource(DataSource):
         return pd.DataFrame({
             "a": [1, 2]
         })
+
+    def _close(self):
+        pass
