@@ -1,5 +1,6 @@
 import pandas as pd
 from intake import DataSource, Schema
+import requests
 
 
 class CBSODataSource(DataSource):
@@ -8,8 +9,8 @@ class CBSODataSource(DataSource):
 
     def __init__(self, url, metadata=None):
 
+        self.base_url = url
         super(CBSODataSource, self).__init__(metadata)
-        self.url = url
 
     def _get_schema(self):
 
@@ -22,9 +23,11 @@ class CBSODataSource(DataSource):
 
     def _get_partition(self, i):
 
-        return pd.DataFrame({
-            "a": [1, 2]
-        })
+        url = self.base_url + "/TypedDataSet"
+        raw = requests.get(url).json()
+        return pd.DataFrame(
+            raw["value"]
+        )
 
     def _close(self):
         pass
