@@ -13,6 +13,8 @@ sources:
       \ been added.\n\nWhen will new figures be published?\nDiscontinued on 29 February\
       \ 2012\n"
     driver: cbs_intake.ds.CBSODataSource
+    cache:
+      - argkey: url
   '37738':
     args:
       url: http://opendata.cbs.nl/ODataApi/OData/37738
